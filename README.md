@@ -10,7 +10,7 @@ Instructor: [Fady Sameh](https://www.linkedin.com/in/fadysameh/)
 | Day | Screen       | Highlights                                                      |
 | --- | ------------ | --------------------------------------------------------------- |
 | 1   | Profile Card | Used separate widget files and created reusable card components |
-| --- | ------------ | --------------------------------------------------------------- |
+| | |  |
 
 ## Tech Stack
 
