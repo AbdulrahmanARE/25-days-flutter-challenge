@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:giza_flutter/screens/signup_screen.dart';
+import '../widgets/auth_header.dart';
+import '../widgets/auth_scaffold.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
 import '../widgets/app_logo.dart';
-import '../widgets/remember_forgot_row.dart';
 import '../widgets/signup_prompt.dart';
-import '../widgets/auth_scaffold.dart';
-import '../widgets/auth_header.dart';
-import 'forgot_password_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,27 +20,29 @@ class LoginScreen extends StatelessWidget {
           const Center(child: AppLogo()),
           const SizedBox(height: 32),
           const AuthHeader(
-            title: 'Sign in to your Account',
-            subtitle: 'Enter your email and password to log in',
+            title: 'Create your Account',
+            subtitle: 'Enter your details to sign up',
           ),
+
           const SizedBox(height: 24),
+
+          const CustomTextField(hintText: 'Full Name'),
+          const SizedBox(height: 16),
           const CustomTextField(hintText: 'example@gmail.com'),
           const SizedBox(height: 16),
           const CustomTextField(hintText: 'Password', isPassword: true),
-          const SizedBox(height: 12),
-          RememberForgotRow(
-            onForgotPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ForgotPasswordScreen(),
-                ),
-              );
-            },
+          const SizedBox(height: 16),
+          const CustomTextField(
+            hintText: 'Confirm Password',
+            isPassword: true,
           ),
-          const SizedBox(height: 8),
-          CustomButton(label: 'Log In', onPressed: () {}),
+
           const SizedBox(height: 20),
+
+          CustomButton(label: 'Sign Up', onPressed: () {}),
+
+          const SizedBox(height: 20),
+
           Row(
             children: const [
               Expanded(child: Divider()),
@@ -54,7 +53,9 @@ class LoginScreen extends StatelessWidget {
               Expanded(child: Divider()),
             ],
           ),
+
           const SizedBox(height: 20),
+
           CustomButton(
             label: 'Continue with Google',
             backgroundColor: Colors.white,
@@ -70,21 +71,19 @@ class LoginScreen extends StatelessWidget {
             icon: FontAwesomeIcons.facebook,
             onPressed: () {},
           ),
+
           const SizedBox(height: 24),
+
           Center(
             child: SignupPrompt(
-              normalText: "Don't have an account? ",
-              actionText: 'Sign Up',
+              normalText: "Already have an account? ",
+              actionText: 'Log In',
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SignupScreen(),
-                  ),
-                );
+                Navigator.pop(context);
               },
             ),
           ),
+          const SizedBox(height: 24),
         ],
       ),
     );
