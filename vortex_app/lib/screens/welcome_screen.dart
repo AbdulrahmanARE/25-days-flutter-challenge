@@ -4,7 +4,6 @@ import '../widgets/background_image.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/app_logo.dart';
 
-//import 'signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
