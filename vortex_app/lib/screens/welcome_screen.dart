@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vortex_app/screens/register_screen.dart';
 import '../widgets/background_image.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/app_logo.dart';
-
+import 'loading_screen.dart';
+import 'login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -55,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
                                 heightFactor: 0.90,
                                 child: Scaffold(
                                   backgroundColor: Colors.transparent,
-                                  body: Placeholder(),
+                                  body: LoginModalContent(),
                                 ),
                               ),
                             );
@@ -64,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                               Navigator.pushAndRemoveUntil(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const Placeholder(),
+                                  builder: (context) => const LoadingScreen(),
                                 ),
                                     (route) => false,
                               );
@@ -89,7 +91,7 @@ class WelcomeScreen extends StatelessWidget {
                               ),
                               builder: (context) => FractionallySizedBox(
                                 heightFactor: 0.90,
-                                child: Placeholder(),
+                                child: RegisterScreen(),
                               ),
                             );
                           },
