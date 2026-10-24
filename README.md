@@ -13,6 +13,7 @@ Instructor: [Fady Sameh](https://www.linkedin.com/in/fadysameh/)
 | 2 | Login Screen | Reusable `CustomButton` used across Log In / Google / Facebook |
 | 3 | Full Auth Flow | Refactored shared scaffold/header into `AuthScaffold` & `AuthHeader` |
 | 4 & 5 | Hallo Español App | Categories & Items data models, reused screen structure across categories |
+| 6 | Vortex — Splash & Welcome | `StatefulWidget` splash with delayed navigation, generalized `CustomButton`/`CustomTextField` |
 
 ## Tech Stack
 
